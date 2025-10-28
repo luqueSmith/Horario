@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #000010 0%, #060025 100%);
+  color: #00ffea;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 234, 0.04),
+    rgba(0, 255, 234, 0.04) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  z-index: 2;
+  position: relative;
+  animation: aparecer 1.5s ease;
+}
+
+h1 {
+  font-size: 2em;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #0ff, 0 0 40px #00bcd4;
+}
+
+h2 {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 1.4em;
+  color: #7df9ff;
+  text-shadow: 0 0 5px #00e1ff;
+}
+
+section {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00f0ff;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  animation: flotar 3s infinite ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.curso {
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0,255,255,0.08);
+  border: 1px solid rgba(0,255,255,0.3);
+  transition: 0.3s ease;
+}
+
+.curso:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+.tarea {
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.2);
+  animation: aparecer 0.8s ease;
+}
+
+.tarea.terminada {
+  background: rgba(0,255,128,0.15);
+  text-decoration: line-through;
+  border-color: #00ff80;
+  color: #00ff80;
+}
+
+button {
+  background: linear-gradient(90deg, #00fff7, #00d4ff);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #00ff9d, #00fff7);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffb3;
+}
+
+a.material {
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+a.material:hover {
+  color: #00ffb3;
+  text-shadow: 0 0 10px #00ffc8;
+}
+
+.boton-horario {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.boton-horario a {
+  background: linear-gradient(90deg, #ff00c8, #8000ff);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 0 20px #a200ff;
+  animation: pulso 2s infinite;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.boton-horario a:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+  opacity: 0.8;
+  font-size: 0.9em;
+  color: #00eaff;
+}
+
+/* Animaciones gamer */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulso {
+  0%, 100% { box-shadow: 0 0 15px #a200ff; }
+  50% { box-shadow: 0 0 30px #ff00c8; }
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.1em; }
+  button, .boton-horario a { font-size: 0.9em; }
+}
