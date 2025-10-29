@@ -2,36 +2,36 @@ const cursos = [
   {
     nombre: "AUDITORÍA EN CIBERSEGURIDAD",
     tareas: [
-      { titulo: "Entregable - E01", fecha: "2025-11-07", material: "https://drive.google.com/" },
-      { titulo: "Actitudes", fecha: "2025-11-07", material: "https://drive.google.com/" },
-      { titulo: "Participación", fecha: "2025-11-07", material: "https://drive.google.com/" }
+      { titulo: "Entregable - E01", fecha: "2025-11-07", material: "https://drive.google.com/drive/folders/1LFXtESXUCqaCBjg6veRGAW4HwLBQu_YU?usp=drive_link" },
+      { titulo: "Actitudes", fecha: "2025-11-07", material: "https://senati.blackboard.com/ultra/course" },
+      { titulo: "Participación", fecha: "2025-11-07", material: "https://senati.blackboard.com/ultra/course" }
     ]
   },
   {
     nombre: "FORMACIÓN DE MONITORES DE EMPRESA",
     tareas: [
-      { titulo: "Evaluación Parcial T03", fecha: "2025-11-04", material: "https://drive.google.com/" },
-      { titulo: "Evaluación Parcial T04", fecha: "2025-11-11", material: "https://drive.google.com/" },
-      { titulo: "Entregable - E01", fecha: "2025-11-13", material: "https://drive.google.com/" },
-      { titulo: "Actitudes", fecha: "2025-11-13", material: "https://drive.google.com/" },
-      { titulo: "Participación", fecha: "2025-11-13", material: "https://drive.google.com/" }
+      { titulo: "Evaluación Parcial T03", fecha: "2025-11-04", material: "https://senati.blackboard.com/ultra/course" },
+      { titulo: "Evaluación Parcial T04", fecha: "2025-11-11", material: "https://senati.blackboard.com/ultra/course" },
+      { titulo: "Entregable - E01", fecha: "2025-11-13", material: "https://drive.google.com/drive/folders/1GRQOTlq11bjTbSAkaDK1HUEuQF4-228J?usp=drive_link" },
+      { titulo: "Actitudes", fecha: "2025-11-13", material: "https://senati.blackboard.com/ultra/course" },
+      { titulo: "Participación", fecha: "2025-11-13", material: "https://senati.blackboard.com/ultra/course" }
     ]
   },
   {
     nombre: "MEJORA DE MÉTODO EN EL TRABAJO",
     tareas: [
-      { titulo: "Avance - E03", fecha: "2025-11-03", material: "https://drive.google.com/" },
-      { titulo: "Trabajo Final", fecha: "2025-11-17", material: "https://drive.google.com/" }
+      { titulo: "Avance - E03", fecha: "2025-11-03", material: "https://drive.google.com/drive/folders/1LBpo_AJ5CzMX7Cf6yakr6UQdeSYnoYVh?usp=drive_link" },
+      { titulo: "Trabajo Final", fecha: "2025-11-17", material: "https://drive.google.com/drive/folders/1q4TLsWTx96GFw6LNZp4NfytT9QSj_FDq?usp=drive_link" }
     ]
   },
   {
     nombre: "SEMINARIO DE COMPLEMENTACIÓN PRÁCTICA III",
     tareas: [
-      { titulo: "Tarea 10", fecha: "2025-11-08", material: "https://drive.google.com/" },
-      { titulo: "Tarea 11", fecha: "2025-11-15", material: "https://drive.google.com/" },
-      { titulo: "Tarea 12", fecha: "2025-11-22", material: "https://drive.google.com/" },
-      { titulo: "Informe de Práctica IP04", fecha: "2025-11-22", material: "https://drive.google.com/" },
-      { titulo: "Actitudes", fecha: "2025-11-22", material: "https://drive.google.com/" }
+      { titulo: "Tarea 10", fecha: "2025-11-08", material: "https://senati.blackboard.com/ultra/course" },
+      { titulo: "Tarea 11", fecha: "2025-11-15", material: "https://senati.blackboard.com/ultra/course" },
+      { titulo: "Tarea 12", fecha: "2025-11-22", material: "https://senati.blackboard.com/ultra/course" },
+      { titulo: "Informe de Práctica IP04", fecha: "2025-11-22", material: "https://drive.google.com/drive/folders/1SStic3uRbZ8TJSL111UkNKimw5bTy1B2?usp=drive_link" },
+      { titulo: "Actitudes", fecha: "2025-11-22", material: "https://senati.blackboard.com/ultra/course" }
     ]
   }
 ];
@@ -88,3 +88,4 @@ cursos.forEach(curso => {
 
   contCursos.appendChild(divCurso);
 });
+
