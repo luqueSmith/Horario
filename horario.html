@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión Empresarial - Horario</title>
+<style>
+  body {
+    background-color: #0f0f1a;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #1e1e2e, #27293d);
+    border-bottom: 2px solid #00ffcc;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+  }
+
+  .semana {
+    margin: 20px auto;
+    width: 95%;
+    max-width: 900px;
+    background: #1c1c2e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc44;
+    overflow: hidden;
+  }
+
+  .semana h2 {
+    background: #141421;
+    padding: 12px;
+    color: #00ffcc;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 0;
+    border-bottom: 2px solid #00ffcc44;
+  }
+
+  .tabla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .dia {
+    background: #222238;
+    border: 1px solid #00ffcc33;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    flex: 1 1 calc(48% - 20px);
+    min-width: 160px;
+    box-shadow: 0 0 10px #00ffcc22;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .dia:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #00ffcc55;
+  }
+
+  .dia h3 {
+    color: #00ffcc;
+    margin-top: 0;
+    border-bottom: 1px solid #00ffcc33;
+    padding-bottom: 5px;
+  }
+
+  .materia {
+    margin: 5px 0;
+  }
+
+  .hora {
+    color: #ccc;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 600px) {
+    .dia {
+      flex: 1 1 100%;
+    }
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #777;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Gestión Empresarial - Horario</h1>
+</header>
+
+<div class="semana">
+  <h2>Semana 1</h2>
+  <div class="tabla" id="semana1"></div>
+</div>
+
+<div class="semana">
+  <h2>Semana 2</h2>
+  <div class="tabla" id="semana2"></div>
+</div>
+
+<div class="semana">
+  <h2>Semana 3</h2>
+  <div class="tabla" id="semana3"></div>
+</div>
+
+<footer>
+  © 2025 | Gestión Empresarial | Actualizado desde Google Sheets
+</footer>
+
+<script>
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTaxERAaSEH9na68n8FTwHPZV4WB-mEb4oHfuEJvs3jY4D-Mdaah1PwTUGzxGr-jn0rSeOGIKm0qgu5/pub?gid=0&single=true&output=csv";
+
+async function cargarDatos() {
+  const resp = await fetch(SHEET_URL);
+  const texto = await resp.text();
+  const filas = texto.split("\n").map(l => l.split(","));
+  
+  // Primera columna: Semana
+  // Segunda: Día
+  // Tercera: Materia
+  // Cuarta: Hora
+  filas.slice(1).forEach(fila => {
+    const [semana, dia, materia, hora] = fila;
+    const contenedor = document.getElementById(semana.trim().toLowerCase());
+    if (contenedor) {
+      let card = document.createElement("div");
+      card.className = "dia";
+      card.innerHTML = `
+        <h3>${dia}</h3>
+        <div class="materia">${materia}</div>
+        <div class="hora">${hora}</div>
+      `;
+      contenedor.appendChild(card);
+    }
+  });
+}
+
+cargarDatos();
+</script>
+
+</body>
+</html>
