@@ -15,7 +15,6 @@ const cursos = [
       { titulo: "Entregable - E01", fecha: "2025-11-13", material: "https://drive.google.com/drive/folders/1GRQOTlq11bjTbSAkaDK1HUEuQF4-228J?usp=drive_link" },
       { titulo: "Actitudes", fecha: "2025-11-13", material: "https://senati.blackboard.com/ultra/course" },
       { titulo: "Participación", fecha: "2025-11-13", material: "https://senati.blackboard.com/ultra/course" }
-      { titulo: "Presentacion-Grupal", fecha: "2025-10-30", material: "https://drive.google.com/" }
     ]
   },
   {
